@@ -22,12 +22,6 @@ class FullTableName: # UC.schema.table_name
     stocks_gold_year = f"{UnityCatalogName.databricksformula1}.{SchemaName.default}.{TableName.stocks_gold_year}"
 
 
-class TableRuns:
-    table_name = ""
-    table_full_name =""
-    pyspark_schema =  ""
-    sql_create_query =""
-
 
 if __name__ == "__main__":
     print(FullTableName.table_runs)
