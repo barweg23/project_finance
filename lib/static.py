@@ -13,8 +13,6 @@ class TableNameClass:
 def calc(table_name: str):
     print(table_name)
 
-calc('asdfasdfs')
-
 def calc2(table_name: TableNameExample):
     if isinstance(table_name, TableName):
         print("table_name is TableName instance")

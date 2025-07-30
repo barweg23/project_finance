@@ -1,6 +1,5 @@
 from lib.tables.info import UnityCatalogName, SchemaName
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType, DateType, TimestampType, LongType
-from schem import CreateTableQuery
 
 
 class TableRuns:
