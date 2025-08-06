@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+from datetime import datetime
+
 from lib.tables.info import UnityCatalogName, SchemaName
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType, DateType, TimestampType, LongType
 
@@ -19,6 +22,12 @@ class TableRuns:
     created_timestamp TIMESTAMP
 );"""
 
+    @dataclass
+    class RowDataclass:
+        run_id: int
+        job_id: int
+        type_of_run: str
+        created_timestamp: datetime
 
 
 if __name__ == "__main__":
@@ -26,3 +35,5 @@ if __name__ == "__main__":
     print(TableRuns.sql_create_query)
     print(TableRuns.table_name)
     print(TableRuns.pyspark_schema)
+    data = TableRuns.RowDataclass(int(1), int(2), 'run_type', datetime.now())
+    print(data)
